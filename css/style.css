@@ -14,7 +14,8 @@ body {
   /* font-family: 'Satisfy', cursive; */
   /* font-family: 'Encode Sans Semi Expanded', sans-serif; */
 
-  background-image: url("../img/noise.png"),
+  background-image:
+    url("../img/noise.webp"),
     radial-gradient(at 78% 61%, rgb(243, 93, 79) -20%, #011226 25%);
   background-attachment: fixed;
   background-position: center;
@@ -78,50 +79,6 @@ a:hover {
   background-color: #1ba0fe;
 }
 
-/* ie */
-.ie {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 999;
-  background: rgba(0, 0, 0, 0.7);
-  text-align: center;
-  font-family: arial;
-}
-.ie button {
-  background: #1a73e8;
-  color: #fff;
-  font-size: 20px;
-  border: none;
-  padding: 10px 0;
-  border-radius: 3px;
-  cursor: pointer;
-  width: 240px;
-}
-.ie img {
-  display: block;
-  margin: 10px auto;
-}
-.ie .center {
-  height: 130px;
-  float: left;
-  width: 260px;
-  left: 50%;
-  top: 50%;
-  position: relative;
-  margin-top: -65px;
-  margin-left: -130px;
-}
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-  .ie {
-    display: block;
-  }
-}
-/* ie end */
-
 header {
   position: relative;
   padding-bottom: 20px;
@@ -137,7 +94,7 @@ header .top-line {
 
   animation-name: headerline;
   animation-duration: 3s;
-  animation-delay: 4.5s;
+  /* animation-delay: 4.5s; */
   animation-fill-mode: forwards;
 }
 @keyframes headerline {
@@ -160,7 +117,7 @@ header .side-line {
 
   animation-name: sideline;
   animation-duration: 4s;
-  animation-delay: 6.3s;
+  /* animation-delay: 6.3s; */
   animation-fill-mode: forwards;
 }
 @keyframes sideline {
@@ -219,7 +176,7 @@ header .side-line {
 .links .links-cont a:hover {
   color: #f35d4f;
 }
-.welcome {
+/* .welcome {
   width: 100%;
   height: 100%;
   position: fixed;
@@ -297,22 +254,28 @@ header .side-line {
     visibility: hidden;
     opacity: 0;
   }
-}
+} */
 
 .btn-cont,
 .title-cont {
   width: 100%;
   margin: 0 auto;
 }
+.btn-cont {
+  display: flex;
+  justify-content: center;
+  gap: 2%;
+}
 .btn-cont button {
-  font-size: 18px;
+  font-size: 14px;
   background: transparent;
-  border: 1px solid #fffdfd;
+  border: 1px solid #fefefe29;
   color: #fffdfd;
   padding: 7px 18px;
   border-radius: 40px;
   transition: 0.2s;
   cursor: pointer;
+  font-weight: 300;
 }
 .btn-cont button:hover {
   color: #f2c186;
@@ -334,45 +297,45 @@ header .side-line {
   background-repeat: no-repeat;
 }
 .word-creative div.creative-1 {
-  background-image: url(../img/creative-1.png);
+  background-image: url(../img/creative-1.webp);
   top: 0;
   position: relative;
   z-index: 4;
 }
 .word-creative div.creative-2 {
-  background-image: url(../img/creative-2.png);
+  background-image: url(../img/creative-2.webp);
   z-index: 3;
   top: -40px;
   left: 0;
   opacity: 0;
 
   animation-name: creative2;
-  animation-duration: 3s;
-  animation-delay: 4.4s;
+  animation-duration: 2.5s;
+  animation-delay: 0.4s;
   animation-fill-mode: forwards;
 }
 .word-creative div.creative-3 {
-  background-image: url(../img/creative-3.png);
+  background-image: url(../img/creative-3.webp);
   z-index: 2;
   top: -80px;
   left: 0;
   opacity: 0;
 
   animation-name: creative3;
-  animation-duration: 3s;
-  animation-delay: 4.5s;
+  animation-duration: 2.5s;
+  animation-delay: 0.5s;
   animation-fill-mode: forwards;
 }
 .word-creative div.creative-4 {
-  background-image: url(../img/creative-4.png);
+  background-image: url(../img/creative-4.webp);
   z-index: 1;
   top: -100px;
   left: 0;
   opacity: 0;
 
   animation-name: creative4;
-  animation-duration: 3s;
-  animation-delay: 4.6s;
+  animation-duration: 2.5s;
+  animation-delay: 0.6s;
   animation-fill-mode: forwards;
 }
 @keyframes creative2 {
@@ -436,7 +399,7 @@ header .side-line {
   line-height: 1.5;
   color: #fff;
   margin-left: 10px;
-  animation: typing 1.5s steps(12, end) 5.7s forwards;
+  animation: typing 1.5s steps(12, end) 0.5s forwards;
   position: relative;
 }
 .word-developer::after {
@@ -500,9 +463,9 @@ header .side-line {
   left: 50%;
   margin-left: -510px;
   float: left;
-  margin-top: 5%;
-  margin-bottom: 7%;
+  margin-top: 10%;
   color: #fff;
+  margin-bottom: 10%;
 }
 .introduction {
   border: 1px solid #fff;
@@ -516,6 +479,7 @@ header .side-line {
   font-weight: 400;
   margin: 0;
   line-height: 1.5;
+  text-align: center;
 }
 .avatar {
   width: 169px;
@@ -594,12 +558,14 @@ header .side-line {
   font-weight: 300;
   margin: 0;
   color: #fff !important;
+  line-height: 1.3;
 }
 .cv p strong {
   font-size: 16px;
   font-weight: 600;
-  margin: 10px 0 0px 0;
+  margin: 10px 0 3px 0;
   display: block;
+  line-height: 1.3;
 }
 .experience div {
   width: 49%;
@@ -630,11 +596,14 @@ header .side-line {
   background-position-y: 3px;
   background-position-x: -146px;
 }
+.insterests {
+  display: flex;
+  margin: 5% 0;
+}
 .interest-item {
   display: inline-block;
-  width: 49%;
-  margin: 20px 0 0;
-  padding-right: 20%;
+  width: 25%;
+  padding: 0;
 }
 .skills-bar {
   width: 100%;
@@ -668,7 +637,7 @@ header .side-line {
   width: 90%;
 }
 .skills-item.move .skills-bar.Wordpress::after {
-  width: 75%;
+  width: 85%;
 }
 .skills-item.move .skills-bar.Photoshop::after {
   width: 100%;
@@ -698,7 +667,7 @@ footer {
 }
 footer .footer_1 {
   position: absolute;
-  left: -60px;
+  left: -5.5%;
   bottom: 47%;
   transform: rotate(90deg);
 }
@@ -981,6 +950,95 @@ span.highlight {
   display: inline-block;
   margin-top: 5px;
 }
+button.close {
+  padding: 0;
+  background-color: transparent;
+  border: 0;
+  -webkit-appearance: none;
+  color: #fff;
+  text-shadow: none;
+  opacity: 0.2;
+  position: relative;
+  top: -10px;
+  right: -3px;
+}
+.close:focus,
+.close:hover {
+  color: inherit;
+  text-decoration: none;
+  opacity: 0.5;
+}
+
+/* new work tab */
+.works-cont {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.work_item_thumb {
+  width: 340px;
+  height: 225px;
+  position: relative;
+}
+.work_item_thumb img {
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  width: 100%;
+}
+.work_thumb_preview {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.work_item_thumb:hover .work_thumb_preview {
+  z-index: 1;
+}
+.work_item_title {
+  color: #fff;
+  text-align: center;
+  width: 100%;
+  margin: 8px 0;
+  font-weight: 500;
+  font-size: 14px;
+}
+.work_item_desc {
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  font-size: 13px;
+  padding: 10px 0 18px;
+  background-image: linear-gradient(0deg, transparent, #f297704a);
+  font-weight: 300;
+}
+.works-item {
+  margin: 5% 0 0;
+}
+.work-tools {
+  color: #fff;
+  text-wrap: nowrap;
+  margin: 30px auto;
+}
+.tool-title {
+  font-size: 14px;
+  font-weight: 500;
+  margin: 25px 0 10px;
+}
+.tool-cont {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 1%;
+}
+.tools-item {
+  background: #10253e;
+  padding: 8px 18px;
+  font-size: 14px;
+  border-radius: 24px;
+}
 
 /* responsive */
 @media only screen and (max-width: 1140px) {
@@ -994,10 +1052,24 @@ span.highlight {
     width: 100%;
     left: 0;
     margin-left: 0;
+    padding: 0 60px;
+  }
+  .ns {
+    padding: 0 60px;
+    width: 100%;
   }
 }
 /* lg */
 @media only screen and (max-width: 992px) {
+  .tool-cont {
+    flex-wrap: wrap;
+  }
+  .tools-item {
+    margin: 5px 0;
+  }
+  footer .footer_1 {
+    display: none;
+  }
   .introduction {
     width: 96%;
     margin: 2%;
@@ -1055,10 +1127,37 @@ span.highlight {
 }
 
 @media only screen and (max-width: 640px) {
+  .tools-item,
+  .work_item_desc {
+    font-size: 12px;
+  }
+  .cv p {
+    font-size: 12px;
+  }
+  .cv p strong {
+    font-size: 14px;
+  }
+  .experience div {
+    margin: 10px 0;
+  }
+  .section-2-box {
+    padding: 0 10px;
+  }
+  .work_item_thumb {
+    width: 280px;
+    height: 158px;
+  }
+  .ns {
+    padding: 0 30px;
+  }
   body {
-    background-position: center, top right;
+    background-position:
+      center,
+      top right;
     background-repeat: repeat, repeat;
-    background-size: auto, 100vw 100vh;
+    background-size:
+      auto,
+      100vw 100vh;
   }
   .logo {
     font-size: 4.5vw;
@@ -1113,9 +1212,12 @@ span.highlight {
     text-align: center;
   }
   .btn-cont button {
-    font-size: 14px;
+    font-size: 12px;
     margin: 0 5px;
     float: none !important;
+  }
+  .btn-cont {
+    gap: 0;
   }
   @keyframes sideline {
     0% {
