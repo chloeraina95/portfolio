@@ -1026,11 +1026,12 @@ button.close {
   font-size: 14px;
   font-weight: 500;
   margin: 25px 0 10px;
+  text-align: center;
 }
 .tool-cont {
   display: flex;
   align-items: center;
-  justify-content: start;
+  justify-content: center;
   gap: 1%;
 }
 .tools-item {
