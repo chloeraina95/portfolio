@@ -979,6 +979,7 @@ button.close {
   width: 340px;
   height: 225px;
   position: relative;
+  cursor: pointer;
 }
 .work_item_thumb img {
   height: 100%;
@@ -993,10 +994,12 @@ button.close {
   width: 100%;
   height: 100%;
   z-index: -1;
+
+  display: none;
 }
-.work_item_thumb:hover .work_thumb_preview {
+/* .work_item_thumb:hover .work_thumb_preview {
   z-index: 1;
-}
+} */
 .work_item_title {
   color: #fff;
   text-align: center;
@@ -1016,6 +1019,12 @@ button.close {
 }
 .works-item {
   margin: 5% 0 0;
+  position: relative;
+  transition: 0.3s;
+  top: 0;
+}
+.works-item:hover {
+  top: -10px;
 }
 .work-tools {
   color: #fff;
